@@ -2,23 +2,17 @@ package br.com.lojinha.pojo;
 
 import br.com.lojinha.enums.Tamanho;
 import br.com.lojinha.interfaces.Favorito;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
 public class ProdutoNacional extends Produto implements Favorito {
-    private Double imposto;
+    @Getter @Setter private Double imposto;
 
-    public ProdutoNacional(String nome, String marca, Tamanho tamanho, List<ItemInclusos> itensInclusos, Double imposto) {
+    public ProdutoNacional(String nome, String marca, Tamanho tamanho, List<ItemIncluso> itensInclusos, Double imposto) {
         super(nome, marca, tamanho, itensInclusos);
         setImposto(imposto);
-    }
-
-    public Double getImposto() {
-        return imposto;
-    }
-
-    public void setImposto(Double imposto) {
-        this.imposto = imposto;
     }
 
     public String getDadosFavoritos() {

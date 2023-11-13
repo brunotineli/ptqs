@@ -1,0 +1,1 @@
+DELETE FROM produtos where produto_id = 1;

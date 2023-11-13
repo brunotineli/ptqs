@@ -3,7 +3,8 @@ itemincluso_id INT NOT NULL AUTO_INCREMENT,
 nome VARCHAR(200) NOT NULL,
 quantidade INT NOT NULL,
 produto_id INT NOT NULL,
-PRIMARY KEY(itemincluso_id)
+PRIMARY KEY(itemincluso_id),
+FOREIGN KEY(produto_id) REFERENCES produto(produto_id)
 );
 
 ALTER TABLE itemincluso

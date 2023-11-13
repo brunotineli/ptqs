@@ -1,0 +1,1 @@
+UPDATE produto set nome = 'Playstation 5' WHERE nome = 'PS5';
